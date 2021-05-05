@@ -10,6 +10,7 @@
     }
 }
 
+
 :root {
     --blanco: #ffffff40;
     --negro: #000000;
@@ -52,40 +53,34 @@ a {
 h2 {
     margin-top: 0;
 }
-
-main {
-    max-width: 660px;
+main
+{
+margin-top: auto; /* Approx */
+}
+header {
+  width: 100%;
+  padding: 1em;
+  position: absolute;
+  left: 0;
+  text-align: center;
 }
 
-/* Categorias del menu - Inicio */
-.principal { /* Establece que las columnas estaran una al lado de la otra */
-    display: flex;
-    justify-content: space-between;
-}
-
-.divisores {
-    max-width: 500px;
-    width: 100%;
-}
-
-.lista_Menu {
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    list-style: none;
+body{
+  align-items: center;
 }
 
 .titulo {
-    background-color: var(--blanco);
-    color: var(--verde);
+
+    margin-top: auto;
+
+    background-color: black;
+    color: white;
     width: 100%;
     height: 160px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 2rem;
+
 }
 
 .titulo > i, h1 {
@@ -96,105 +91,47 @@ main {
     font-style: italic;
 }
 
-.columna {
-    width: 50%;
+/* CRUD */
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+.styled-table tbody tr {
+    background-color: #caebd0;
+    border-bottom: 1px solid #dddddd;
 }
 
-.columna_Categorias {
-    max-width: 500px;
-    width: 100%;
-    position: fixed;
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
 }
 
-.categorias {
-    margin-top: 15px;
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
 }
+button {
+  font-weight: 600;
+  padding: 0.5rem 2rem;
+  border: 0;
+  border-radius: 1px;
 
-.iconos_Categorias {
-    margin-right: 15px;
-    margin-left: 40px;
-    font-size: 1.4rem;
+  color: #fff;
 }
-
-.opcion_Categorias {
-    background-color: var(--blanco);
-    color: var(--verde);
-    min-width: 480px;
-    height: 100px;
-    display: flex;
-    text-decoration: none;
-    align-items: center;
-    font-size: 1.25rem;
+.db{
+  background-color: #ff5d2b;
 }
-
-.opcion_Categorias:hover,
-.opcion_Categorias.active { /* Establece el cambio de colores que tendra una categoria al ser seleccionada */
-    min-width: 500px;
-    background-color: var(--verde);
-    color: var(--blanco);
+.ub{
+  background-color: #30a18a;
 }
-/* Categorias del menu - Fin */
-
-/* Opciones del menu - Inicio */
-.columna_Contenido {
-    animation: efectoRevelar 1s; /* Da un efecto de revelacion al cambiar de categoria */
-}
-
-.columna_Fondo {
-    background-color: var(--fondoNegro_Cuadro);
-    color: var(--blanco);
-}
-
-.columna_OpcionMenu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-.columna_Imagen {
-    margin-right: 20px;
-    width: 160px;
-    height: 160px;
-}
-
-.columna_Texto {
-    padding: 20px 25px;
-    flex: 1;
-}
-
-.comida_Nombre {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 0;
-}
-
-.comida_Precio {
-    color: var(--verdeClaro);
-}
-/* Opciones del menu - Fin */
-
-/* Bebidas - Inicio */
-.bebidas_Menu {
-    background-color: var(--fondoNegro_Cuadro);
-    color: var(--blanco);
-    height: 80px;
-}
-
-.bebidas_Menu > ul {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 100%;
-}
-
-.bebidas_Categorias {
-    color: var(--blanco);
-}
-
-.bebidas_Categorias:hover,
-.bebidas_Categorias.active { /* Establece el cambio de colores que tendra una categoria al ser seleccionada */
-    color: var(--verdeClaro);
-    border-bottom: 4px solid var(--verdeClaro);
-}
-/* Bebidas - Fin */
