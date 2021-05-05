@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+    <!-- Head -->
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Manejo de Ganado</title>
+
+        <!-- Iconos -->
+
+        <link href="icon/fontawesome/css/all.min.css" rel="stylesheet">
+
+        <!-- CSS - Javascript-->
+        <link href="css/masterCSS.css" rel="stylesheet"/>
+
+    </head>
+
+    <!-- Body -->
+    <body>
+
+      <div class="header">
+          <i class="fas fa-tractor"></i>
+          <h1>Manejo de Ganado</h1>
+
+
+      </div>
+
+      <div class="main">
+
+        <table class="styled-table" id="tabla">
+          <thead>
+              <tr>
+                  <th>Agregar</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>
+                           <form action="./NewServlet1" method="POST">
+
+                             <input type="text" name="admin" placeholder="Ingrese el codigo" required="">
+
+                             <input type="text" name="pass" placeholder="Ingrese la edad" required="">
+
+                              <input type="text" name="pass" placeholder="Ingrese el corral" required="">
+
+                               <input type="text" name="pass" placeholder="Ingrese el codigo de la madre" required="">
+                          <input type="submit" value="Guardar">
+                        </form></td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+<div class="nav">
+  <button onclick="location.href='index.html'" type="button">
+   Volver</button>
+
+</div>
+
+    </body>
+</html>

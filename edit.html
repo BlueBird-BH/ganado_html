@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+    <!-- Head -->
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Manejo de Ganado</title>
+
+        <!-- Iconos -->
+
+        <link href="icon/fontawesome/css/all.min.css" rel="stylesheet">
+
+        <!-- CSS - Javascript-->
+        <link href="css/masterCSS.css" rel="stylesheet"/>
+
+    </head>
+
+    <!-- Body -->
+    <body>
+
+      <div class="header">
+          <i class="fas fa-tractor"></i>
+          <h1>Manejo de Ganado</h1>
+
+
+      </div>
+
+      <div class="main">
+
+        <table class="styled-table2" id="tabla">
+          <thead>
+              <tr>
+                  <th>Informacion</th>
+              </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                Codigo: 541
+            </td>
+          </tr>
+              <tr>
+                <td>
+                  Edad: 12 meses
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Produccion promedio: 20 lts
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Establo: 2
+          </td>
+        </tr>
+          </tbody>
+        </table>
+      </div>
+      <p></p>
+
+      <div class="">
+        <table class="styled-table2" id="tabla">
+          <thead>
+              <tr>
+                <th>Producion</th>
+              </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <img src="./img/gp.jpg" width="550" height="250">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      </div>
+<p></p>
+<div class="nav">
+
+
+
+  <table class="styled-table2" id="tabla">
+    <thead>
+        <tr>
+            <th>Agregar produccion Diaria</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>produccion de dd/mm/aaaa</td>
+      </tr>
+        <tr>
+          <td>
+            <form class="form2"action="./NewServlet1" method="POST">
+                <input type="text" name="admin" placeholder="Ingrese la produccion en litros" required="">
+                <button class="ub">Confirmar</button>
+            </form>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+</div>
+
+    </body>
+</html>

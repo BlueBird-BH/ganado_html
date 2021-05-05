@@ -12,19 +12,22 @@
 
         <!-- CSS - Javascript-->
         <link href="css/masterCSS.css" rel="stylesheet"/>
-        <script src="js/masterJS.js" type="text/javascript"></script>
+
     </head>
 
     <!-- Body -->
     <body>
-<!--
-      <header class="titulo">
+
+      <div class="header">
           <i class="fas fa-tractor"></i>
           <h1>Manejo de Ganado</h1>
-      </header>
--->
-      <main>
-        <table class="styled-table">
+      </div>
+
+      <div class="main">
+        <p></p>
+
+
+        <table class="styled-table" id="tabla">
           <thead>
               <tr>
                   <th>Codigo</th>
@@ -43,7 +46,7 @@
                   <td>23 lts</td>
                   <td>2</td>
                   <td>
-                      <button class="ub">Eliminar</button>
+                      <button class="ub"  onclick="location.href='edit.html'">Eliminar</button>
                   </td>
                   <td>
                       <button class="db">Eliminar</button>
@@ -55,7 +58,7 @@
                   <td>23 lts</td>
                   <td>2</td>
                   <td>
-                      <button class="ub">Eliminar</button>
+                      <button class="ub"  onclick="location.href='edit.html'">Eliminar</button>
                   </td>
                   <td>
                       <button class="db">Eliminar</button>
@@ -67,7 +70,7 @@
                   <td>23 lts</td>
                   <td>2</td>
                   <td>
-                      <button class="ub">Eliminar</button>
+                      <button class="ub"  onclick="location.href='edit.html'">Eliminar</button>
                   </td>
                   <td>
                       <button class="db">Eliminar</button>
@@ -80,7 +83,55 @@
                 <td>21 lts</td>
                 <td>2</td>
                 <td>
-                    <button class="ub">Eliminar</button>
+                    <button class="ub"   onclick="location.href='edit.html'">Eliminar</button>
+                </td>
+                <td>
+                    <button class="db">Eliminar</button>
+                </td>
+              </tr>
+              <tr>
+                <td>316</td>
+                <td>14 meses</td>
+                <td>21 lts</td>
+                <td>2</td>
+                <td>
+                    <button class="ub"   onclick="location.href='edit.html'">Eliminar</button>
+                </td>
+                <td>
+                    <button class="db">Eliminar</button>
+                </td>
+              </tr>
+              <tr>
+                <td>316</td>
+                <td>14 meses</td>
+                <td>21 lts</td>
+                <td>2</td>
+                <td>
+                    <button class="ub"   onclick="location.href='edit.html'">Eliminar</button>
+                </td>
+                <td>
+                    <button class="db">Eliminar</button>
+                </td>
+              </tr>
+              <tr>
+                <td>316</td>
+                <td>14 meses</td>
+                <td>21 lts</td>
+                <td>2</td>
+                <td>
+                    <button class="ub" onclick="location.href='edit.html'">Eliminar</button>
+                </td>
+                <td>
+                    <button class="db">Eliminar</button>
+                </td>
+              </tr>
+              <tr>
+                <td>316</td>
+                <td>14 meses</td>
+                <td>21 lts</td>
+                <td>2</td>
+                <td>
+                    <button class="ub"onclick="location.href='edit.html'">Eliminar</button>
                 </td>
                 <td>
                     <button class="db">Eliminar</button>
@@ -89,7 +140,12 @@
 
           </tbody>
       </table>
-      </main>
+
+</div>
+<div class="nav">
+  <button onclick="location.href='add.html'" type="button">
+       Crear</button>
+</div>
 
     </body>
 </html>
