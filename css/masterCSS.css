@@ -11,10 +11,10 @@
 }
 
 :root {
-    --blanco: #fefefe;
+    --blanco: #ffffff40;
     --negro: #000000;
-    --verde: #00af86;
-    --verdeClaro: #a9e8da;
+    --verde: #ffffff80;
+    --verdeClaro: #ffffff80;
     --fondoNegro_Fondo: rgba(0,0,0,0.7);
     --fondoNegro_Cuadro: rgba(0,0,0,0.9);
 }
@@ -85,6 +85,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 2rem;
 }
 
 .titulo > i, h1 {
