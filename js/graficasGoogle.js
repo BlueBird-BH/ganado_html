@@ -1,27 +1,48 @@
-google.charts.load('current', { packages: ['corechart', 'line'] });
+var colorBlanco = "#FFF";
+var colorVerde = "#30c1a4"
+
+google.charts.load("current", { packages: ["corechart", "line"] });
 google.charts.setOnLoadCallback(graficarDatos);
 
+function definirLetrasBlancas(titulo) {
+    let datos = {
+        title: titulo,
+        textStyle: { color: colorBlanco },
+        titleTextStyle: { color: colorBlanco },
+        gridlines: { count: 0 },
+        baselineColor: colorBlanco
+    }
+
+    return datos
+}
+
+function recolectarDatos() {
+    return [ [0, 0], [1, 10], [2, 23], [3, 17], [4, 18], [5, 9] ]
+}
+
 function graficarDatos() {
-    var datos = new google.visualization.DataTable();
+    let datos = new google.visualization.DataTable();
+    let dondeVisualizar = document.getElementById("graficaProduccion");
+    
+    let fondoTransparente = { fill: "transparent" }
+    let ejeHorizontal = definirLetrasBlancas("Tiempo");
+    let ejeVertical = definirLetrasBlancas("Litros de leche producidos");
 
-    datos.addColumn('number', 'X');
-    datos.addColumn('number', 'Dogs');
-
-    datos.addRows([
-        [0, 0], [1, 10], [2, 23], [3, 17], [4, 18], [5, 9],
-        [6, 11], [7, 27], [8, 33], [9, 40], [10, 32], [11, 35]
-    ]);
-
-    var opcionesEjes = {
-        hAxis: {
-            title: 'Tiempo'
-        },
-        vAxis: {
-            title: 'Litros de leche producidos'
-        }
+    let opciones = {
+        colors: [colorVerde],
+        hAxis: ejeHorizontal,
+        vAxis: ejeVertical,
+        legend: {position: 'none'},
+        chartArea: { backgroundColor: fondoTransparente },
+        backgroundColor: fondoTransparente,
+        width: 900,
+        height: 600
     };
 
-    var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+    datos.addColumn("number", "X");
+    datos.addColumn("number", "Litros");
+    datos.addRows(recolectarDatos());
 
-    chart.draw(datos, opcionesEjes);
+    let grafica = new google.visualization.LineChart(dondeVisualizar);
+    grafica.draw(datos, opciones);
 }
