@@ -78,20 +78,56 @@
                                     <th>Edad (Meses)</th>
                                     <th>Produccion promedio de leche</th>
                                     <th>Corral donde se encuentra</th>
-                                    <th>Editar datos</th>
+                                    <th>Opciones</th>
                                 </tr>
                             </thead>
 
                             <tbody id="contenidoTabla">
                                 <tr>
+                                    <td>423122</td>
+                                    <td>Juana</td>
+                                    <td>48</td>
+                                    <td>7 Litros</td>
+                                    <td>2</td>
+                                    <td>
+                                        <i class="boton botonHistorial fas fa-file-alt"
+                                            onclick="resaltarBoton('graficas')"></i>
+                                        <i class="boton botonEditar fas fa-edit"
+                                            onclick="mostrarPanel('tablaEditarDatos')"></i>
+                                        <i class="boton botonEliminar fas fa-trash-alt"
+                                            onclick="mostrarPanel('tablaEliminarDatos')"></i>
+                                    </td>
+                                </tr>
+
+                                <tr>
                                     <td>2108394</td>
                                     <td>Lola</td>
                                     <td>23</td>
-                                    <td>4 Litros</td>
-                                    <td>423122</td>
+                                    <td>6 Litros</td>
+                                    <td>3</td>
                                     <td>
-                                        <i class="boton botonEditar fas fa-edit" onclick="mostrarPanel('tablaEditarDatos')"></i>
-                                        <i class="boton botonEliminar fas fa-trash-alt" onclick="mostrarPanel('tablaEliminarDatos')"></i>
+                                        <i class="boton botonHistorial fas fa-file-alt"
+                                            onclick="resaltarBoton('graficas')"></i>
+                                        <i class="boton botonEditar fas fa-edit"
+                                            onclick="mostrarPanel('tablaEditarDatos')"></i>
+                                        <i class="boton botonEliminar fas fa-trash-alt"
+                                            onclick="mostrarPanel('tablaEliminarDatos')"></i>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>7566765</td>
+                                    <td>Lucia</td>
+                                    <td>34</td>
+                                    <td>4 Litros</td>
+                                    <td>3</td>
+                                    <td>
+                                        <i class="boton botonHistorial fas fa-file-alt"
+                                            onclick="resaltarBoton('graficas')"></i>
+                                        <i class="boton botonEditar fas fa-edit"
+                                            onclick="mostrarPanel('tablaEditarDatos')"></i>
+                                        <i class="boton botonEliminar fas fa-trash-alt"
+                                            onclick="mostrarPanel('tablaEliminarDatos')"></i>
                                     </td>
                                 </tr>
                             </tbody>
@@ -100,7 +136,40 @@
                 </div>
                 <!-- Graficas -->
                 <div id="graficasOpciones" class="columna_Contenido" style="display:none;">
+                    <div>
+                        <div class="grupoElementos">
+                            <i class="fas fa-tag"></i>
+                            <h3>Seleccione un nombre</h3>
+                        </div>
+
+                        <select class="desplegable">
+                            <option value="423122">Juana</option>
+                            <option value="7566765">Lucia</option>
+                            <option value="2108394">Lola</option>
+                        </select>
+                    </div>
+
                     <div id="graficaProduccion" class="grafica"></div>
+
+                    <div class="grupoContenedorDatos">
+                        <p class="campoTituloDatos">Codigo</p>
+                        <input id="codigoEliminar" type="text" name="name" class="campoTextoDatos" value="" disabled>
+                    </div>
+
+                    <div class="grupoContenedorDatos">
+                        <p class="campoTituloDatos">Produccion promedio de leche por dia</p>
+                        <input id="codigoEliminar" type="text" name="name" class="campoTextoDatos" value="" disabled>
+                    </div>
+
+                    <div class="grupoContenedorDatos">
+                        <p class="campoTituloDatos">Nombre de la madre</p>
+                        <input id="codigoEliminar" type="text" name="name" class="campoTextoDatos" value="" disabled>
+                    </div>
+
+                    <div class="grupoContenedorDatos">
+                        <p class="campoTituloDatos">Corral en el que se encuentra actualmente</p>
+                        <input id="codigoEliminar" type="text" name="name" class="campoTextoDatos" value="" disabled>
+                    </div>
                 </div>
                 <!-- Cerrado de etiquetas -->
             </main>

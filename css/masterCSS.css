@@ -14,6 +14,7 @@
     --gris: #3e3e3b;
     --grisClaro: #dfe9e7;
     --aqua: #30c1a4;
+    --azulClaro: #cee5ec;
     --azul: #21aeda;
     --rojo: #da6b21;
     --fondoNegro_Fondo: rgba(0,0,0,0.7);
@@ -60,6 +61,32 @@ h2 {
 
 main {
     max-width: 660px;
+}
+
+.desplegable {
+    margin: 0px;
+    font-size: 100%;
+    padding: 5px 10px 5px 10px;
+    font-family: Segoe UI, Helvetica, sans-serif;
+    border: 0;
+    border: 1px solid var(--negro);
+    box-sizing: border-box;
+    outline: none;
+    background-color: var(--gris);
+    color: var(--blanco)
+}
+
+.grupoElementos {
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.grupoElementos > i, h3 {
+    color: var(--blanco);
+    margin-right: 10px;
+    font-size: 1.4rem;
+    font-weight: bold;
 }
 
 /* Categorias del menu - Inicio */
@@ -171,8 +198,9 @@ main {
 
 /* Botones */
 .boton {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     cursor: pointer;
+    margin-right: 0.4px;
 }
 
 .botonAgregar {
@@ -192,6 +220,10 @@ main {
 .botonAgregar.active {
     background-color: var(--verdeOscuro);
     color: var(--grisClaro);
+}
+
+.botonHistorial {
+    color: var(--azulClaro);
 }
 
 .botonEditar {
