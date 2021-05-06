@@ -1,280 +1,158 @@
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
-    <!-- Head -->
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Manejo de Ganado</title>
+<!-- Head -->
 
-        <!-- Iconos -->
-        <link href="icon/favicon.svg" rel="icon" type="icon/svg+xml" sizes="any">
-        <link href="icon/fontawesome/css/all.min.css" rel="stylesheet">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manejo de Ganado</title>
 
-        <!-- CSS - Javascript-->
-        <link href="css/masterCSS.css" rel="stylesheet"/>
-        <script src="js/masterJS.js" type="text/javascript"></script>
-    </head>
+    <!-- Iconos -->
+    <link href="icon/favicon.svg" rel="icon" type="icon/svg+xml" sizes="any">
+    <link href="icon/fontawesome/css/all.min.css" rel="stylesheet">
 
-    <!-- Body -->
-    <body>
-        <div class="sombreado"></div>
-        <!-- Principal - Inicio -->
-        <div class="principal">
-            <!-- Columna Izquierda -->
-            <div class="columna">
-                <div class="columna_Categorias">
-                    <!-- Titulo -->
-                    <div class="titulo">
-                        <i class="fas fa-tractor"></i>
-                        <h1>Manejo de Ganado</h1>
-                    </div>
-                    <!-- Navegacion por categorias del menu -->
-                    <nav>
-                        <ul class="lista_Menu">
-                            <!-- Opcion de Pizzas -->
-                            <li class="categorias">
-                                <a id="pizzas" onclick="resaltarBoton(id)" href="#pizzas" class="opcion_Categorias active">
-                                    <i class="iconos_Categorias fas fa-pizza-slice"></i>
-                                    <span>Pizzas</span>
-                                </a>
-                            </li>
-                            <!-- Opcion de Hamburguesas -->
-                            <li class="categorias">
-                                <a id="hamburguesas" onclick="resaltarBoton(id)" href="#hamburguesas" class="opcion_Categorias">
-                                    <i class="iconos_Categorias fas fa-hamburger"></i>
-                                    <span>Hamburguesas</span>
-                                </a>
-                            </li>
-                            <!-- Opcion de Bebidas -->
-                            <li class="categorias">
-                                <a id="bebidas" onclick="resaltarBoton(id)" href="#bebidas" class="opcion_Categorias">
-                                    <i class="iconos_Categorias fas fa-glass-whiskey"></i>
-                                    <span>Bebidas</span>
-                                </a>
-                            </li>
-                            <!-- Opcion de Postres -->
-                            <li class="categorias">
-                                <a id="postres" onclick="resaltarBoton(id)" href="#postres" class="opcion_Categorias">
-                                    <i class="iconos_Categorias fas fa-ice-cream"></i>
-                                    <span>Postres</span>
-                                </a>
-                            </li>
-                            <!-- Cerrado de etiquetas -->
-                        </ul>
-                    </nav>
+    <!-- CSS - Javascript-->
+    <link href="css/masterCSS.css" rel="stylesheet" />
+    <link href="css/agregarDatosTabla.css" rel="stylesheet" />
+
+    <script src="js/masterJS.js" type="text/javascript"></script>
+    <script src="js/agregarDatosTabla.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="js/graficasGoogle.js" type="text/javascript"></script>
+</head>
+
+<!-- Body -->
+
+<body>
+    <!-- Principal - Inicio -->
+    <div class="principal">
+        <!-- Columna Izquierda -->
+        <div class="columna">
+            <div class="columna_Categorias">
+                <!-- Titulo -->
+                <div class="titulo">
+                    <i class="fas fa-tractor"></i>
+                    <h1>Manejo de Ganado</h1>
                 </div>
+                <!-- Navegacion por categorias del menu -->
+                <nav>
+                    <ul class="lista_Menu">
+                        <!-- Opcion de Tabla -->
+                        <li class="categorias">
+                            <a id="tablas" onclick="resaltarBoton(id)" href="#tablas" class="opcion_Categorias active">
+                                <i class="iconos_Categorias fas fa-table"></i>
+                                <span>Ganado registrado</span>
+                            </a>
+                        </li>
+                        <!-- Opcion de Graficas -->
+                        <li class="categorias">
+                            <a id="graficas" onclick="resaltarBoton(id)" href="#graficas" class="opcion_Categorias">
+                                <i class="iconos_Categorias fas fa-chart-line"></i>
+                                <span>Historial de producción</span>
+                            </a>
+                        </li>
+                        <!-- Cerrado de etiquetas -->
+                    </ul>
+                </nav>
             </div>
-            <div class="columna">
-                <main>
-                    <!-- Pizza -->
-                    <div id="pizzaOpciones" class="columna_Contenido">
-                        <div>
-                            <div class="columna_OpcionMenu">
-                                <img src="img/pizza-pepperoni.png" class="columna_Imagen">
-                                <div class="columna_Fondo columna_Texto">
-                                    <h3 class="comida_Nombre">Pepperoni
-                                        <span class="comida_Precio">$16,900</span>
-                                    </h3>
-                                    <p>Pizza grande de pepperoni preparada con nuestra deliciosa salsa de tomate, una mezcla de quesos mozzarella y muenster 100% leche de vaca</p>
-                                </div>
-                            </div>
-                            <div class="columna_OpcionMenu">
-                                <img src="img/pizza-suprema.png" class="columna_Imagen">
-                                <div class="columna_Fondo columna_Texto">
-                                    <h3 class="comida_Nombre">Pizza Suprema
-                                        <span class="comida_Precio">$29,900</span>
-                                    </h3>
-                                    <p>Pizza grande con pepperoni, salchicha italiana, champiñones, pimiento verde y cebolla. Preparada con nuestra deliciosa salsa de tomate, una mezcla de quesos mozzarella y muenster</p>
-                                </div>
-                            </div>
-                            <div class="columna_OpcionMenu">
-                                <img src="img/pizza-hawai.png" class="columna_Imagen">
-                                <div class="columna_Fondo columna_Texto">
-                                    <h3 class="comida_Nombre">Hawaiana
-                                        <span class="comida_Precio">$16,900</span>
-                                    </h3>
-                                    <p>Pizza grande con jamon y piña, preparada con salsa de tomate y quesos mozzarella y muenster</p>
-                                </div>
-                            </div>
-                            <div class="columna_OpcionMenu">
-                                <img src="img/pizza-vegetariana.png" class="columna_Imagen">
-                                <div class="columna_Fondo columna_Texto">
-                                    <h3 class="comida_Nombre">Vegetariana
-                                        <span class="comida_Precio">$29,900</span>
-                                    </h3>
-                                    <p>Pizza grande preparada con salsa, queso, pimientos verdes, cebolla, champiñon, aceitunas negras y especias italianas</p>
-                                </div>
-                            </div>
-                        </div>
+        </div>
+        <div class="columna">
+            <main>
+                <!-- Tabla -->
+                <div id="tablasOpciones" class="columna_Contenido">
+                    <div>
+                        <span onclick="mostrarPanel()" class="boton botonAgregar">
+                            Agregar datos »
+                        </span>
                     </div>
-                    <!-- Hamburguesas -->
-                    <div id="hamburguesaOpciones" class="columna_Contenido" style="display:none;">
-                        <div>
-                            <div class="columna_OpcionMenu">
-                                <img src="img/hamburguesa-clasica.png" class="columna_Imagen">
-                                <div class="columna_Fondo columna_Texto">
-                                    <h3 class="comida_Nombre">Clasica
-                                        <span class="comida_Precio">$16,400</span>
-                                    </h3>
-                                    <p>Carne 113 gr de res a la parrilla, tomates, lechuga , pepinillos, cebollas en rodajas y cremosa mayonesa sobre un pan con ajonjolí</p>
-                                </div>
-                            </div>
-                            <div class="columna_OpcionMenu">
-                                <img src="img/hamburguesa-pollo.png" class="columna_Imagen">
-                                <div class="columna_Fondo columna_Texto">
-                                    <h3 class="comida_Nombre">Pollo
-                                        <span class="comida_Precio">$14,900</span>
-                                    </h3>
-                                    <p>Filete 100% pechuga de pollo, tomate, lechuga recién cortada, y cremosa mayonesa sobre un premium pan de papa</p>
-                                </div>
-                            </div>
-                            <div class="columna_OpcionMenu">
-                                <img src="img/hamburguesa-texana.png" class="columna_Imagen">
-                                <div class="columna_Fondo columna_Texto">
-                                    <h3 class="comida_Nombre">Texana
-                                        <span class="comida_Precio">$17,000</span>
-                                    </h3>
-                                    <p>Dos deliciosas carnes de res 113 gr c/u a la parrilla , tocino crujiente, deliciosa salsa BBQ y cebollitas crispy</p>
-                                </div>
-                            </div>
-                            <div class="columna_OpcionMenu">
-                                <img src="img/hamburguesa-triple.png" class="columna_Imagen">
-                                <div class="columna_Fondo columna_Texto">
-                                    <h3 class="comida_Nombre">Triple
-                                        <span class="comida_Precio">$18,600</span>
-                                    </h3>
-                                    <p>Triple carne de res 113 gr C/U a la parrilla, queso, tocineta crujiente y deliciosa salsa stacker sobre un pan con ajonjolí</p>
-                                </div>
-                            </div>
-                        </div>
+
+                    <div>
+                        <table class="tabla">
+                            <thead>
+                                <tr>
+                                    <th>Codigo</th>
+                                    <th>Nombre</th>
+                                    <th>Edad (Meses)</th>
+                                    <th>Produccion promedio de leche</th>
+                                    <th>Corral donde se encuentra</th>
+                                    <th>Editar datos</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>315</td>
+                                    <td>Lola</td>
+                                    <td>9</td>
+                                    <td>23 lts</td>
+                                    <td>2</td>
+                                    <td>
+                                        <i class="boton botonEditar fas fa-edit" onclick=""></i>
+                                        <i class="boton botonEliminar fas fa-trash-alt" onclick=""></i>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>315</td>
+                                    <td>Lola</td>
+                                    <td>9</td>
+                                    <td>23 lts</td>
+                                    <td>2</td>
+                                    <td>
+                                        <i class="boton botonEditar fas fa-edit" onclick=""></i>
+                                        <i class="boton botonEliminar fas fa-trash-alt" onclick=""></i>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <!-- Bebidas -->
-                    <div id="bebidaOpciones" style="display:none;">
-                        <!-- Barra de menu para categorias de bebidas -->
-                        <nav class="bebidas_Menu">
-                            <ul class="lista_Menu">
-                                <li>
-                                    <a id="jugos" onclick="resaltarBebidas(id)" href="#" class="bebidas_Categorias active">Jugos</a>
-                                </li>
-                                <li>
-                                    <a id="gaseosas" onclick="resaltarBebidas(id)" href="#" class="bebidas_Categorias">Gaseosas</a>
-                                </li>
-                            </ul>
-                        </nav>
-                        <!-- Jugos -->
-                        <div id="jugosOpciones" class="columna_Contenido">
-                            <div class="columna_OpcionMenu">
-                                <img src="img/bebida-limonada.png" class="columna_Imagen">
-                                <div class="columna_Fondo columna_Texto">
-                                    <h3 class="comida_Nombre">Limonada
-                                        <span class="comida_Precio">$1,590</span>
-                                    </h3>
-                                    <p>Limonada natural sin azucar</p>
+                </div>
+                <!-- Graficas -->
+                <div id="graficasOpciones" class="columna_Contenido" style="display:none;">
+                    <div id="chart_div"></div>
+                </div>
+                <!-- Cerrado de etiquetas -->
+            </main>
+        </div>
+        <!-- Principal - Fin -->
+
+        <!-- Agregar datos a Tabla -->
+        <div class="agregarDatosTabla">
+            <table class="agregarDatosTabla_Panel">
+                <thead>
+                    <tr>
+                        <th>Agregar datos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <form class="agregarDatosTabla_Form">
+                                <div class="agregarDatosTabla_grupoContenedor ingresarNombre">
+                                    <input type="text" name="name" class="agregarDatosTabla_Ingreso" placeholder="Nombre" required>
                                 </div>
-                            </div>
-                            <div class="columna_OpcionMenu">
-                                <img src="img/bebida-naranja.png" class="columna_Imagen">
-                                <div class="columna_Fondo columna_Texto">
-                                    <h3 class="comida_Nombre">Naranja
-                                        <span class="comida_Precio">$2,290</span>
-                                    </h3>
-                                    <p>Jugo natural de naranja</p>
+
+                                <div class="agregarDatosTabla_grupoContenedor">
+                                    <input type="text" name="name" class="agregarDatosTabla_Ingreso" placeholder="Edad" required>
                                 </div>
-                            </div>
-                            <div class="columna_OpcionMenu">
-                                <img src="img/bebida-fresa.png" class="columna_Imagen">
-                                <div class="columna_Fondo columna_Texto">
-                                    <h3 class="comida_Nombre">Fresa
-                                        <span class="comida_Precio">$2,290</span>
-                                    </h3>
-                                    <p>Jugo natural de fresa en agua</p>
+
+                                <div class="agregarDatosTabla_grupoContenedor">
+                                    <input type="text" name="name" class="agregarDatosTabla_Ingreso" placeholder="Corral" required>
                                 </div>
-                            </div>
-                        </div>
-                        <!-- Gaseosas -->
-                        <div id="gaseosasOpciones" class="columna_Contenido" style="display:none;">
-                            <div class="columna_OpcionMenu">
-                                <img src="img/bebida-pepsi.png" class="columna_Imagen">
-                                <div class="columna_Fondo columna_Texto">
-                                    <h3 class="comida_Nombre">Pepsi
-                                        <span class="comida_Precio">$2,590</span>
-                                    </h3>
-                                    <p>Bebida personal de 400ml</p>
+
+                                <div class="agregarDatosTabla_grupoContenedor">
+                                    <input type="text" name="name" class="agregarDatosTabla_Ingreso" placeholder="Codigo de la madre" required>
                                 </div>
-                            </div>
-                            <div class="columna_OpcionMenu">
-                                <img src="img/bebida-manzana.png" class="columna_Imagen">
-                                <div class="columna_Fondo columna_Texto">
-                                    <h3 class="comida_Nombre">Manzana
-                                        <span class="comida_Precio">$2,590</span>
-                                    </h3>
-                                    <p>Bebida personal de 400ml</p>
-                                </div>
-                            </div>
-                            <div class="columna_OpcionMenu">
-                                <img src="img/bebida-7up.png" class="columna_Imagen">
-                                <div class="columna_Fondo columna_Texto">
-                                    <h3 class="comida_Nombre">7up
-                                        <span class="comida_Precio">$2,590</span>
-                                    </h3>
-                                    <p>Bebida personal de 400ml</p>
-                                </div>
-                            </div>
-                            <div class="columna_OpcionMenu">
-                                <img src="img/bebida-mrtea.png" class="columna_Imagen">
-                                <div class="columna_Fondo columna_Texto">
-                                    <h3 class="comida_Nombre">Mr Tea Limón
-                                        <span class="comida_Precio">$3,190</span>
-                                    </h3>
-                                    <p>Bebida personal de 500ml</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Postres -->
-                    <div id="postreOpciones" class="columna_Contenido" style="display:none;">
-                        <div>
-                            <div class="columna_OpcionMenu">
-                                <img src="img/postre-twisted.png" class="columna_Imagen">
-                                <div class="columna_Fondo columna_Texto">
-                                    <h3 class="comida_Nombre">Twisted Brownie
-                                        <span class="comida_Precio">$9,900</span>
-                                    </h3>
-                                    <p>Base de helado de vainilla, bañado de salsa de chocolate y caramelo, con trozos de suave brownie y una deliciosa cereza para complementar</p>
-                                </div>
-                            </div>
-                            <div class="columna_OpcionMenu">
-                                <img src="img/postre-vainilla.png" class="columna_Imagen">
-                                <div class="columna_Fondo columna_Texto">
-                                    <h3 class="comida_Nombre">Cono de Vainilla
-                                        <span class="comida_Precio">$1,800</span>
-                                    </h3>
-                                    <p>Clasico y cremoso cono de helado de vainilla</p>
-                                </div>
-                            </div>
-                            <div class="columna_OpcionMenu">
-                                <img src="img/postre-sundae.png" class="columna_Imagen">
-                                <div class="columna_Fondo columna_Texto">
-                                    <h3 class="comida_Nombre">Sundae
-                                        <span class="comida_Precio">$3,900</span>
-                                    </h3>
-                                    <p>Delicioso helado de vainilla en vaso, acompañado de nuestra salsa de chocolate</p>
-                                </div>
-                            </div>
-                            <div class="columna_OpcionMenu">
-                                <img src="img/postre-tiramisu.png" class="columna_Imagen">
-                                <div class="columna_Fondo columna_Texto">
-                                    <h3 class="comida_Nombre">Tiramisú
-                                        <span class="comida_Precio">$8,500</span>
-                                    </h3>
-                                    <p>La deliciosa combinación de crema de queso mascarpone, sobre suaves capas de bizcochuelo de chocolate suave mojado en café; cubierto en suave cocoa</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Cerrado de etiquetas -->
-                </main>
-            </div>
-            <!-- Principal - Fin -->
-    </body>
+
+                                <i onclick="cerrarPanel()" class="boton botonGuardar fas fa-save"></i>
+                                <i onclick="cerrarPanel()" class="boton botonCerrar fas fa-window-close"></i>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- Agregar datos a Tabla - Fin -->
+</body>
+
 </html>

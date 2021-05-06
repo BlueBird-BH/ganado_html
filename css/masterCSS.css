@@ -1,13 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 @keyframes efectoRevelar {
-    from {
-        opacity: 0.4;
-    }
-
-    to {
-        opacity: 1;
-    }
+    from { opacity: 0.4; }
+    to { opacity: 1; }
 }
 
 :root {
@@ -15,6 +10,12 @@
     --negro: #000000;
     --verde: #00af86;
     --verdeClaro: #a9e8da;
+    --verdeOscuro: #348673;
+    --gris: #3e3e3b;
+    --grisClaro: #dfe9e7;
+    --aqua: #30c1a4;
+    --azul: #21aeda;
+    --rojo: #da6b21;
     --fondoNegro_Fondo: rgba(0,0,0,0.7);
     --fondoNegro_Cuadro: rgba(0,0,0,0.9);
 }
@@ -197,3 +198,69 @@ main {
     border-bottom: 4px solid var(--verdeClaro);
 }
 /* Bebidas - Fin */
+
+/* Botones */
+.boton {
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.botonAgregar {
+    font-size: 1.05rem;
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-align: center;
+    background-color: var(--verde);
+    color: var(--blanco);
+    border-radius: 2px;
+}
+
+.botonAgregar:hover,
+.botonAgregar.active {
+    background-color: var(--verdeOscuro);
+    color: var(--grisClaro);
+}
+
+.botonEditar {
+    color: var(--azul);
+}
+
+.botonEliminar {
+    color: var(--rojo);
+}
+
+/* Tabla */
+.tabla {
+    color: var(--blanco);
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.tabla thead tr {
+    background-color: var(--aqua);
+    color: var(--blanco);
+    text-align: center;
+}
+.tabla th,
+.tabla td {
+    padding: 12px 15px;
+}
+
+.tabla tbody tr {
+    border-bottom: 1px solid var(--aqua);
+}
+
+.tabla tbody tr:nth-of-type(even) {
+    background-color: var(--gris);
+}
+
+.tabla tbody tr:last-of-type {
+    border-bottom: 2px solid var(--aqua);
+}
+
