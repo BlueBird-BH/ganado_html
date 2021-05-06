@@ -20,6 +20,10 @@
     --fondoNegro_Cuadro: rgba(0,0,0,0.9);
 }
 
+* {
+    box-sizing: border-box;
+}
+
 html {
     /* Usa una imagen de fondo y pone una capa translucida */
     background: linear-gradient(
@@ -163,41 +167,7 @@ main {
     flex: 1;
 }
 
-.comida_Nombre {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 0;
-}
-
-.comida_Precio {
-    color: var(--verdeClaro);
-}
 /* Opciones del menu - Fin */
-
-/* Bebidas - Inicio */
-.bebidas_Menu {
-    background-color: var(--fondoNegro_Cuadro);
-    color: var(--blanco);
-    height: 80px;
-}
-
-.bebidas_Menu > ul {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 100%;
-}
-
-.bebidas_Categorias {
-    color: var(--blanco);
-}
-
-.bebidas_Categorias:hover,
-.bebidas_Categorias.active { /* Establece el cambio de colores que tendra una categoria al ser seleccionada */
-    color: var(--verdeClaro);
-    border-bottom: 4px solid var(--verdeClaro);
-}
-/* Bebidas - Fin */
 
 /* Botones */
 .boton {
@@ -264,3 +234,28 @@ main {
     border-bottom: 2px solid var(--aqua);
 }
 
+@media (max-width: 900px) {
+    .principal { 
+        display: block;
+    }
+
+    .lista_Menu {
+        display: block;
+    }
+
+    .columna_Categorias { 
+        margin-bottom: 50px; 
+        display: block; 
+    }
+
+    .columna_OpcionMenu {
+        display: block;
+    }
+
+    .columna {
+        display: block; 
+        width: 100%; 
+        height: auto; 
+    }
+
+}
