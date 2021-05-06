@@ -14,17 +14,18 @@ function modificarEstadoPanel(claseSolicitada, estadoSolicitado) {
 
 function mostrarPanel(clase) {
     modificarEstadoPanel(clase, "mostrar");
+    ejecutarFuncion(clase)
 }
 
 function cerrarPanel(clase) {
     modificarEstadoPanel(clase, "ocultar");
 }
 
-/*
+// General
 function ejecutarFuncion(clase) {
     let diccionario = new Map();
-    diccionario.set("tablaEditarDatos", editarDatos.name);
-    diccionario.set("tablaEliminarDatos", eliminarDatos.name);
+    diccionario.set("tablaEditarDatos", cargarDatosEditar.name);
+    diccionario.set("tablaEliminarDatos", cargarDatosEliminar.name);
 
     for (let [clave, valor] of diccionario) {
         if (clase === clave) {
@@ -32,13 +33,12 @@ function ejecutarFuncion(clase) {
         }
     }
 }
-*/
 
 // Agregar datos
 function agregarDatos() {
     let tabla = document.getElementById("contenidoTabla");
 
-    let id = "Numero";
+    let id = "ID de prueba";
     let nombre = document.getElementById("nombreAgregar");
     let edad = document.getElementById("edadAgregar");
     let corral = document.getElementById("corralAgregar");
@@ -60,15 +60,32 @@ function agregarDatos() {
     madre.value = "";
 
     tabla.innerHTML += contenidoHTML;
+    cerrarPanel("tablaAgregarDatos")
 }
 
 // Editar datos
+function cargarDatosEditar() {
+    let id = document.getElementById("codigoEditar");
+
+    id.value = "ID de prueba"
+}
+
 function editarDatos() {
     console.log("Editar datos")
+    cerrarPanel("tablaEditarDatos")
 }
 
 // Eliminar datos
+function cargarDatosEliminar() {
+    let id = document.getElementById("codigoEliminar");
+    let nombre = document.getElementById("nombreEliminar");
+
+    id.value = "ID de prueba"
+    nombre.value = "Nombre de prueba"
+}
+
 function eliminarDatos() {
+    cerrarPanel("tablaEliminarDatos")
     console.log("Eliminar datos")
 }
 
