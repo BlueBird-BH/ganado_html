@@ -82,7 +82,19 @@
                                 </tr>
                             </thead>
 
-                            <tbody id="contenidoTabla"></tbody>
+                            <tbody id="contenidoTabla">
+                                <tr>
+                                    <td>2108394</td>
+                                    <td>Lola</td>
+                                    <td>23</td>
+                                    <td>4 Litros</td>
+                                    <td>423122</td>
+                                    <td>
+                                        <i class="boton botonEditar fas fa-edit" onclick="mostrarPanel('tablaEditarDatos')"></i>
+                                        <i class="boton botonEliminar fas fa-trash-alt" onclick="mostrarPanel('tablaEliminarDatos')"></i>
+                                    </td>
+                                </tr>
+                            </tbody>
                         </table>
                     </div>
                 </div>
@@ -109,23 +121,28 @@
                         <td>
                             <form class="formDatos">
                                 <div class="grupoContenedorDatos tablaPrimerElemento">
-                                    <input id="nombreAgregar" type="text" name="name" class="campoTextoDatos" placeholder="Nombre" required>
+                                    <input id="nombreAgregar" type="text" name="name" class="campoTextoDatos"
+                                        placeholder="Nombre" required>
                                 </div>
 
                                 <div class="grupoContenedorDatos">
-                                    <input id="edadAgregar" type="text" name="name" class="campoTextoDatos" placeholder="Edad" required>
+                                    <input id="edadAgregar" type="text" name="name" class="campoTextoDatos"
+                                        placeholder="Edad" required>
                                 </div>
 
                                 <div class="grupoContenedorDatos">
-                                    <input id="corralAgregar" type="text" name="name" class="campoTextoDatos" placeholder="Corral" required>
+                                    <input id="corralAgregar" type="text" name="name" class="campoTextoDatos"
+                                        placeholder="Corral" required>
                                 </div>
 
                                 <div class="grupoContenedorDatos">
-                                    <input id="madreAgregar" type="text" name="name" class="campoTextoDatos" placeholder="Codigo de la madre">
+                                    <input id="madreAgregar" type="text" name="name" class="campoTextoDatos"
+                                        placeholder="Codigo de la madre">
                                 </div>
 
                                 <i onclick="agregarDatos()" class="boton botonGuardar fas fa-save"></i>
-                                <i onclick="cerrarPanel('tablaAgregarDatos')" class="boton botonCerrar fas fa-undo-alt"></i>
+                                <i onclick="cerrarPanel('tablaAgregarDatos')"
+                                    class="boton botonCerrar fas fa-undo-alt"></i>
                             </form>
                         </td>
                     </tr>
@@ -152,19 +169,23 @@
                                 </div>
 
                                 <div class="grupoContenedorDatos">
-                                    <input id="nombreEditar" type="text" name="name" class="campoTextoDatos" placeholder="Nombre" required>
+                                    <input id="nombreEditar" type="text" name="name" class="campoTextoDatos"
+                                        placeholder="Nombre" required>
                                 </div>
 
                                 <div class="grupoContenedorDatos">
-                                    <input id="corralEditar" type="text" name="name" class="campoTextoDatos" placeholder="Corral" required>
+                                    <input id="corralEditar" type="text" name="name" class="campoTextoDatos"
+                                        placeholder="Corral" required>
                                 </div>
 
                                 <div class="grupoContenedorDatos">
-                                    <input id="codigoMadreEditar" type="text" name="name" class="campoTextoDatos" placeholder="Codigo de la madre" required>
+                                    <input id="codigoMadreEditar" type="text" name="name" class="campoTextoDatos"
+                                        placeholder="Codigo de la madre" required>
                                 </div>
 
                                 <i onclick="editarDatos()" class="boton botonGuardar fas fa-save"></i>
-                                <i onclick="cerrarPanel('tablaEditarDatos')" class="boton botonCerrar fas fa-undo-alt"></i>
+                                <i onclick="cerrarPanel('tablaEditarDatos')"
+                                    class="boton botonCerrar fas fa-undo-alt"></i>
                             </form>
                         </td>
                     </tr>
@@ -190,16 +211,19 @@
 
                                 <div class="grupoContenedorDatos tablaPrimerElemento">
                                     <p class="campoTituloDatos">Codigo</p>
-                                    <input id="codigoEliminar" type="text" name="name" class="campoTextoDatos" value="" disabled>
+                                    <input id="codigoEliminar" type="text" name="name" class="campoTextoDatos" value=""
+                                        disabled>
                                 </div>
 
                                 <div class="grupoContenedorDatos">
                                     <p class="campoTituloDatos">Nombre</p>
-                                    <input id="nombreEliminar" type="text" name="name" class="campoTextoDatos" value="" disabled>
+                                    <input id="nombreEliminar" type="text" name="name" class="campoTextoDatos" value=""
+                                        disabled>
                                 </div>
 
                                 <i onclick="eliminarDatos()" class="boton botonGuardar fas fa-check-square"></i>
-                                <i onclick="cerrarPanel('tablaEliminarDatos')" class="boton botonCerrar fas fa-window-close"></i>
+                                <i onclick="cerrarPanel('tablaEliminarDatos')"
+                                    class="boton botonCerrar fas fa-window-close"></i>
                             </form>
                         </td>
                     </tr>
