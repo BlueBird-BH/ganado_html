@@ -4,9 +4,9 @@ function modificarEstadoPanel(claseSolicitada, estadoSolicitado) {
     let estadoRequerido = "";
 
     if (estadoSolicitado === "mostrar") {
-        estadoRequerido = "block"
+        estadoRequerido = "block";
     } else {
-        estadoRequerido = "none"
+        estadoRequerido = "none";
     }
 
     claseRequerida.style.display = estadoRequerido;
@@ -29,7 +29,7 @@ function ejecutarFuncion(clase) {
 
     for (let [clave, valor] of diccionario) {
         if (clase === clave) {
-            window[valor]()
+            window[valor]();
         }
     }
 }
@@ -60,19 +60,25 @@ function agregarDatos() {
     madre.value = "";
 
     tabla.innerHTML += contenidoHTML;
-    cerrarPanel("tablaAgregarDatos")
+    cerrarPanel("tablaAgregarDatos");
+}
+
+// Agregar litros
+function agregarDatosLeche() {
+    console.log("Datos agregados");
+    cerrarPanel("tablaAgregarDatosLeche");
 }
 
 // Editar datos
 function cargarDatosEditar() {
     let id = document.getElementById("codigoEditar");
 
-    id.value = "ID de prueba"
+    id.value = "ID de prueba";
 }
 
 function editarDatos() {
-    console.log("Editar datos")
-    cerrarPanel("tablaEditarDatos")
+    console.log("Editar datos");
+    cerrarPanel("tablaEditarDatos");
 }
 
 // Eliminar datos
@@ -80,12 +86,12 @@ function cargarDatosEliminar() {
     let id = document.getElementById("codigoEliminar");
     let nombre = document.getElementById("nombreEliminar");
 
-    id.value = "ID de prueba"
-    nombre.value = "Nombre de prueba"
+    id.value = "ID de prueba";
+    nombre.value = "Nombre de prueba";
 }
 
 function eliminarDatos() {
-    cerrarPanel("tablaEliminarDatos")
-    console.log("Eliminar datos")
+    cerrarPanel("tablaEliminarDatos");
+    console.log("Eliminar datos");
 }
 

@@ -17,7 +17,7 @@ function definirLetrasBlancas(titulo) {
 }
 
 function recolectarDatos() {
-    return [ [0, 0], [1, 10], [2, 23], [3, 17], [4, 18], [5, 9] ]
+    return [ [1, 10], [2, 23], [3, 17], [4, 18], [5, 9] ]
 }
 
 function graficarDatos() {
@@ -25,7 +25,7 @@ function graficarDatos() {
     let dondeVisualizar = document.getElementById("graficaProduccion");
     
     let fondoTransparente = { fill: "transparent" }
-    let ejeHorizontal = definirLetrasBlancas("Tiempo");
+    let ejeHorizontal = definirLetrasBlancas("Dia");
     let ejeVertical = definirLetrasBlancas("Litros de leche producidos");
 
     let opciones = {

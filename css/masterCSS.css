@@ -76,6 +76,9 @@ main {
     color: var(--blanco)
 }
 
+.seleccionVaca {
+    margin-left: 5%;
+}
 .grupoElementos {
     margin: auto;
     display: flex;
@@ -203,6 +206,11 @@ main {
     margin-right: 0.4px;
 }
 
+.botonAgregarLeche {
+    margin-bottom: 15px;
+}
+
+.botonAgregarLeche,
 .botonAgregar {
     font-size: 1.05rem;
     border: none;
