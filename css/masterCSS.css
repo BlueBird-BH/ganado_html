@@ -267,27 +267,25 @@ main {
 }
 
 @media (max-width: 900px) {
-    .principal { 
-        display: block;
-    }
 
-    .lista_Menu {
-        display: block;
-    }
+  #tablasOpciones{
+    position: absolute;
+    right:0px; /*A la izquierda deje un espacio de 0px*/
+    display: block;
 
-    .columna_Categorias { 
-        margin-bottom: 50px; 
-        display: block; 
-    }
+  }
+  .columna_Categorias{
+    display: none;
+  }
 
-    .columna_OpcionMenu {
-        display: block;
-    }
+  .botonAgregar{
+  position:absolute;
+   top:5px;
+   right:10px;
+   background-color: var(--blanco);
+   color: var(--verde);
+  }
 
-    .columna {
-        display: block; 
-        width: 100%; 
-        height: auto; 
-    }
+
 
 }
