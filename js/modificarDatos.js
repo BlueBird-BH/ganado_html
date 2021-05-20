@@ -50,7 +50,8 @@ function agregarDatos() {
     contenidoHTML += `  <td>${edad.value}</td>`;
     contenidoHTML += `  <td>${corral.value}</td>`;
     contenidoHTML += `  <td>${madre.value}</td>`;
-    contenidoHTML += `  <td><i class="boton botonEditar fas fa-edit" onclick="mostrarPanel('tablaEditarDatos')"></i>`;
+    contenidoHTML += `  <td><i class="boton botonHistorial fas fa-file-alt"  onclick="resaltarBoton('graficas')"></i>`;
+    contenidoHTML += `  <i class="boton botonEditar fas fa-edit" onclick="mostrarPanel('tablaEditarDatos')"></i>`;
     contenidoHTML += `  <i class="boton botonEliminar fas fa-trash-alt" onclick="mostrarPanel('tablaEliminarDatos')"></i></td>`;
     contenidoHTML += "</tr>";
 
